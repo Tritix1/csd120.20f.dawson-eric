@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #0d0d0d;
+}
+
+.width-wrap {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    padding: 0 2em 2em;
+    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: none;
+    background-color: #1a1a1a;
+    color: #d9d9d9;
+}
+
+::selection {
+    background-color: #d000d0;
+}
+
+footer hr {
+    width: 50vw;
+    min-width: 300px;
+    max-width: 890px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border-bottom: 3px dotted #003300;
+}
+
+h1,
+h2,
+h3 {
+    color: #a7d129;
+}
+
+a {
+    color: #a7d129;
+}
+
+header a {
+    color: #d000d0;
+    padding: 1em 0.5em 1em;
+}
+
+header a:hover {
+    border-top: 4px solid #d000d0;
+}
+
+header {
+    border-top: 4px solid rgb(0, 0, 0);
+    border-top: 4px solid rgba(0, 0, 0, 0.1);
+    margin-left: -2em;
+    margin-right: -2em;
+}
+
+header nav {
+    border-bottom: 1px dotted rgba(0, 255, 0, 0.3);
+    margin: 0em 2em;
+}
+
+ul li {
+    display: inline;
+    
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    padding-top: 1em;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.3em 1em;
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.3em 1em;
+}
+
+
+
+dt::after {
+   content:":"; 
+}
