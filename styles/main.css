@@ -68,9 +68,8 @@ header nav {
     margin: 0em 2em;
 }
 
-ul li {
+header ul li {
     display: inline;
-    
 }
 
 header nav ul {
@@ -93,8 +92,22 @@ th {
     padding: 0.3em 1em;
 }
 
+form input,
+select,
+#life {
+    display: block;
+}
 
+button {
+    border: 0;
+    padding: 1em 3em;
+    background-color: #a7d129;
+    color: black;
+}
 
+input:invalid {
+    background-color: red;
+}
 dt::after {
    content:":"; 
 }
