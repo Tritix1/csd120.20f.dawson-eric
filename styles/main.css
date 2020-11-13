@@ -9,10 +9,11 @@ html {
 
 body {
     background-color: #0d0d0d;
+    color: rgba(0,0,0,0.9);
 }
 
 .width-wrap {
-    width: 960px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3em;
@@ -34,6 +35,7 @@ footer hr {
     max-width: 890px;
     margin-top: 3em;
     margin-bottom: 2em;
+    border: none;
     border-bottom: 3px dotted #003300;
 }
 
@@ -49,7 +51,10 @@ a {
 
 header a {
     color: #d000d0;
-    padding: 1em 0.5em 1em;
+    display: inline-block;
+    padding: 1em 0 0.5em;
+    margin: -4px 1em 0;
+    border-top: 4px solid rgba(0,0,0,0);
 }
 
 header a:hover {
@@ -75,10 +80,9 @@ header ul li {
 header nav ul {
     margin: 0;
     padding: 0;
-    padding-top: 1em;
 }
 
-tr:nth-child(even) {
+tbody tr:nth-child(even) td {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -87,18 +91,22 @@ td {
     padding: 0.3em 1em;
 }
 
-th {
+th,
+thead td,
+tfoot td {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0.3em 1em;
 }
 
-form input,
-select,
-#life {
+form label {
     display: block;
 }
+form input[type="radio"] ~ label,
+form input[type="checkbox"] ~ label {
+    display: inline;
+}
 
-button {
+[type="submit"] {
     border: 0;
     padding: 1em 3em;
     background-color: #a7d129;
