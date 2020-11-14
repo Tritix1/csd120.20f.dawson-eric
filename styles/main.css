@@ -142,6 +142,7 @@ table {
     column-span: all;
     margin-top: 1em;
     border-collapse: collapse;
+    caption-side: bottom;
 }
 
 form label {
