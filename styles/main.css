@@ -20,6 +20,7 @@ img {
 
 div.bio img[src="Images/face.jpg"] {
     padding: 2%;
+    background-color: #ffffff;
     box-shadow: 5px 5px #171717;
 }
 .width-wrap {
@@ -173,7 +174,7 @@ iframe {
     border-bottom-left-radius: 2em;
 }
 
-fieldset li {
+fieldset ul {
     padding: 0;
     list-style-type: none;
 }
