@@ -21,8 +21,21 @@
         main img {
             margin: 1em;
         }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
         footer {
             clear:both;
+        }
+        @media screen and (max-width:600px) {
+            main p img {
+                display: block;
+                float: none !important;
+                margin: auto;
+            }
         }
     </style>
 </head>
@@ -43,13 +56,13 @@
         <main> 
             <h1>Lorem Ipsum</h1>
             
-            <p style="float: left;"><img src="https://loremflickr.com/320/240/abandoned?lock=69420" alt="Abandoned"/></p>
+            <p ><img class="left" src="https://loremflickr.com/320/240/abandoned?lock=69420" alt="Abandoned"/></p>
 
             <p>Fry! Quit doing the right thing, you jerk! Negative, bossy meat creature! Is that a cooking show? I'm sorry, guys. I never meant to hurt you. Just to destroy everything you ever believed in. When I was first asked to make a film about my nephew, Hubert Farnsworth, I thought "Why should I?" Then later, Leela made the film. But if I did make it, you can bet there would have been more topless women on motorcycles. Roll film!</p>
             
             <p>A true inspiration for the children. Tell them I hate them. Kids have names? So I really am important? How I feel when I'm drunk is correct? Goodbye, cruel world. Goodbye, cruel lamp. Goodbye, cruel velvet drapes, lined with what would appear to be some sort of cruel muslin and the cute little pom-pom curtain pull cords. Cruel though they may be…</p>
 
-            <p style="float: right;"><img src="https://loremflickr.com/320/240/creepy?lock=69420" alt="Creepy"/></p>
+            <p ><img class="right" src="https://loremflickr.com/320/240/creepy?lock=69420" alt="Creepy"/></p>
 
             <p>Oh, how I wish I could believe or understand that! There's only one reasonable course of action now: kill Flexo! Man, I'm sore all over. I feel like I just went ten rounds with mighty Thor. Oh, I don't have time for this. I have to go and buy a single piece of fruit with a coupon and then return it, making people wait behind me while I complain.</p>
             
