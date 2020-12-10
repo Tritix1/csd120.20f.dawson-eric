@@ -272,7 +272,7 @@ div.favourites input:checked + label {
     }
 }
 /* end of tab styling for favourite things */
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* beginning of the grid layout */
 
 div.gallery {
@@ -308,6 +308,76 @@ div.gallery img:hover {
 }
 
 /* end of the grid layout */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* beginning of sandwich menu layout */
+
+header nav label,
+header nav input {
+    display: none;
+}
+
+@media screen and (max-width:350px) {
+    label.sandwich-icon {
+        transition: border-top linear 200ms;
+        display: block;
+        width: 40px;
+        height: 25px;
+        border-top: 5px solid #d000d0;
+        cursor: pointer;
+        margin: 1em auto 1em auto;
+        position: relative;
+    }
+    label.sandwich-icon::after {
+        transition: transform linear 200ms, top ease-out 200ms;
+        display: block;
+        width: 40px;
+        content: "";
+        border-top: 5px solid #d000d0;
+        position: absolute;
+        top: 5px;
+    }
+    label.sandwich-icon::before {
+        transition: transform linear 200ms, top ease-out 200ms;
+        display: block;
+        width: 40px;
+        content: "";
+        border-top: 5px solid #d000d0;
+        position: absolute;
+        top: 15px;
+    }
+    input:checked + .sandwich-icon {
+        border-top: 5px solid #1a1a1a;
+    }
+    input:checked + label.sandwich-icon::before {
+        transform: rotate(45deg);
+        top: 5px;
+    }
+    input:checked + label.sandwich-icon::after {
+        transform: rotate(-45deg);
+        top: 5px;
+    }
+
+    header[id="top"] nav ul {
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 200ms ease-out;
+    }
+    header a {
+        padding-top: 0.5em;
+        border: none;
+    }
+    header a:hover {
+        border: none;
+        text-decoration: underline #d000d0;
+    }
+    header nav input:checked + label + ul {
+        height: 100px;
+    }
+}
+
+/* end of sandwich menu layout */
 
 @media screen and (max-width:500px) {
     table.courses tfoot,
@@ -338,17 +408,3 @@ div.gallery img:hover {
     }
 }
 
-@media screen and (max-width:350px) {
-    header[id="top"] nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    header a {
-        padding-top: 0.5em;
-        border: none;
-    }
-    header a:hover {
-        border: none;
-        text-decoration: underline #d000d0;
-    }
-}
